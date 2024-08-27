@@ -4,9 +4,9 @@
 }
 
 .avion {
-    width: 250px;
+    width: 180px;
     position: absolute;
-    left: 20%;
+    left: 30%;
     top: 25%;
     filter: drop-shadow(0 10px 10px rgba(0, 0, 0, 0.309));
 }
