@@ -13,13 +13,13 @@ export const Autentication = () => {
 
     const loginService = async (e) => {
         e.preventDefault();
-
+        const URL = import.meta.env.VITE_URL_BASE;
         const data = {
             username: username,
             password: password
         }
 
-        await axios.post("http://37.60.252.97:3000/api/users/login", data)
+        await axios.post(`${URL}/users/login`, data)
             .then((resp) => {
                 console.log(resp)
                 if (resp.status == 200) {
@@ -37,11 +37,11 @@ export const Autentication = () => {
             <div className="container_world">
                 <img src={mundo} alt="img mundo" />
             </div>
-            <div className='w-full h-20 mt-44 flex flex-col justify-center items-center'>
-                <h5 className='font-bold text-2xl text-gray-950'>Login</h5>
-                <input type='text' placeholder='Username' className='mt-7 border-2 rounded-lg' onChange={(e) => setUsername(e.target.value)} />
-                <input type='password' placeholder='Password' className='mt-7 border-2 rounded-lg' onChange={(e) => setPassword(e.target.value)} />
-                <button className='mt-5 bg-[#121534] w-20 text-white rounded-lg' onClick={loginService}>Login</button>
+            <div className='w-full h-20 mt-44 flex flex-col justify-center items-center md:mt-60'>
+                <h5 className='font-bold text-2xl text-gray-950 md:text-4xl'>Login</h5>
+                <input type='text' placeholder='Username' className='mt-7 border-2 rounded-lg md:w-[200px]' onChange={(e) => setUsername(e.target.value)} />
+                <input type='password' placeholder='Password' className='mt-7 border-2 rounded-lg md:w-[200px]' onChange={(e) => setPassword(e.target.value)} />
+                <button className='mt-5 bg-[#121534] w-20 text-white rounded-lg md:w-[200px]' onClick={loginService}>Login</button>
             </div>
         </div>
     )

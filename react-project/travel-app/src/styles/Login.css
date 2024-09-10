@@ -7,7 +7,7 @@
     width: 180px;
     position: absolute;
     left: 30%;
-    top: 25%;
+    top: 20%;
     filter: drop-shadow(0 10px 10px rgba(0, 0, 0, 0.309));
 }
 
@@ -66,4 +66,34 @@
     color: white;
     border: none;
     border-radius: 30px;
+}
+
+@media screen and (max-width: 320px) {
+    .avion {
+        width: 100px;
+        top: 15%;
+        left: 35%;
+    }
+
+    .container_world {
+        height: 150px;
+    }
+
+    .container_world img {
+        height: 150px;
+    }
+}
+
+@media screen and (min-width: 760px) {
+    .avion {
+        width: 300px;
+        top: 10%;
+        left: 32%;
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    .avion {
+        left: 40%;
+    }
 }
