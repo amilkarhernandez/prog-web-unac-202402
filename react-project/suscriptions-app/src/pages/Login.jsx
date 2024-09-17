@@ -48,7 +48,7 @@ export const Login = () => {
                 <input type="text" placeholder='username' className='w-[350px] h-14 rounded-lg pl-3 placeholder:text-gray-500'
                     value={username} onChange={(e) => setUsername(e.target.value)} />
                 <input type="password" placeholder='Password' className='w-[350px] h-14 rounded-lg pl-3 mt-2 placeholder:text-gray-500'
-                    value={password} onChange={(e) => setPassword(e.target.value)} />
+                    value={password} onChange={(e) => setPassword(e.target.value)} data-testid="datapassword" />
 
                 <button className='text-white bg-[#28253b] flex justify-center items-center w-[350px] h-14 rounded-xl mt-20'
                     onClick={handleLogin}>
